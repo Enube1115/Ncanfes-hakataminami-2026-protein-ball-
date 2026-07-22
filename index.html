@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>プロテインボール - N高キャンパスフェスティバル</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Poppins:wght@600;700&family=Playfair+Display:wght@700;800&family=Montserrat:wght@600;700&family=Russo+One&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      color: #ffffff;
+      background: linear-gradient(180deg, #0f1419 0%, #1a1f2e 50%, #0d0f14 100%);
+      background-attachment: fixed;
+      line-height: 1.7;
+    }
+    
+    section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+      border-bottom: 4px solid #ff8c00;
+      padding: 2.5rem 1.5rem 2rem;
+      background: linear-gradient(135deg, #1a1f2e 0%, #0f1419 100%);
+      border-radius: 0 0 16px 16px;
+    }
+    
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 56px;
+      font-weight: 800;
+      margin-bottom: 0.75rem;
+      background: linear-gradient(135deg, #ff8c00 0%, #ffb347 50%, #ff6600 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: 1px;
+      text-shadow: 0 4px 12px rgba(255, 140, 0, 0.2);
+      filter: drop-shadow(0 2px 4px rgba(255, 140, 0, 0.1));
+    }
+    
+    .subtitle {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 20px;
+      font-weight: 800;
+      color: #ff8c00;
+      margin-top: 0.75rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+    
+    .event-info {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-weight: 800;
+      color: #ff6600;
+      margin-top: 1rem;
+      letter-spacing: 1px;
+      background: linear-gradient(90deg, #ff8c00 0%, #ffb347 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .section-title {
+      font-family: 'Russo One', sans-serif;
+      font-size: 28px;
+      font-weight: 400;
+      margin-bottom: 2rem;
+      background: linear-gradient(90deg, #ff8c00 0%, #ffb347 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    
+    .menu-card {
+      background: linear-gradient(135deg, #1a1f2e 0%, #0f1419 100%);
+      border: 3px solid #ff8c00;
+      border-radius: 12px;
+      padding: 2.5rem 2rem;
+      max-width: 500px;
+      box-shadow: 0 8px 24px rgba(255, 140, 0, 0.25);
+    }
+    
+    .menu-visual {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      font-size: 48px;
+      letter-spacing: 8px;
+    }
+    
+    .menu-name {
+      font-family: 'Russo One', sans-serif;
+      font-size: 36px;
+      font-weight: 400;
+      color: #ff8c00;
+      margin-bottom: 1rem;
+      text-align: center;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    
+    .menu-description {
+      font-size: 16px;
+      color: #e8e8e8;
+      text-align: center;
+      margin-bottom: 0.75rem;
+      line-height: 1.8;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+    }
+    
+    .menu-appeal {
+      font-family: 'Russo One', sans-serif;
+      font-size: 15px;
+      color: #ffb347;
+      text-align: center;
+      margin-bottom: 2rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1.8;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    
+    .menu-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+      font-size: 14px;
+      padding: 0.75rem 0;
+      border-bottom: 0.5px solid rgba(255, 140, 0, 0.2);
+    }
+    
+    .menu-row:last-child {
+      border-bottom: none;
+    }
+    
+    .menu-label {
+      font-family: 'Russo One', sans-serif;
+      color: #b8b8b8;
+      font-weight: 400;
+      font-size: 13px;
+      letter-spacing: 0.5px;
+    }
+    
+    .menu-value {
+      color: #ff8c00;
+      font-weight: 600;
+    }
+    
+    .placeholder {
+      color: #888888;
+      font-style: italic;
+    }
+    
+    .spacer {
+      height: 8rem;
+    }
+    
+    .leader-section {
+      background: linear-gradient(135deg, #1a1f2e 0%, #0f1419 100%);
+      border: 3px solid #ff8c00;
+      border-radius: 12px;
+      padding: 2rem;
+    }
+    
+    .appeal {
+      text-align: center;
+      margin: 2rem 0;
+      font-size: 18px;
+      font-weight: 600;
+      color: #ff8c00;
+      line-height: 1.8;
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .fade-in {
+      opacity: 0;
+    }
+    
+    .fade-in.visible {
+      animation: fadeInUp 0.6s ease-out forwards;
+    }
+    
+    .nutrition-toggle {
+      background: #ff8c00;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      margin-top: 1.5rem;
+      width: 100%;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .nutrition-toggle:hover {
+      background: #ff9f1f;
+      box-shadow: 0 4px 12px rgba(255, 140, 0, 0.4);
+    }
+    
+    .nutrition-toggle.open {
+      background: #ff7722;
+    }
+    
+    .nutrition-info {
+      display: none;
+      margin-top: 1.5rem;
+      padding: 1.5rem;
+      background: rgba(255, 140, 0, 0.08);
+      border-radius: 8px;
+      border-left: 4px solid #ff8c00;
+    }
+    
+    .nutrition-info.open {
+      display: block;
+      animation: fadeInUp 0.4s ease-out;
+    }
+    
+    .nutrition-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5rem 0;
+      font-size: 13px;
+      border-bottom: 0.5px solid rgba(255, 140, 0, 0.2);
+    }
+    
+    .nutrition-row:last-child {
+      border-bottom: none;
+    }
+    
+    .nutrition-label {
+      font-family: 'Russo One', sans-serif;
+      color: #b8b8b8;
+      font-weight: 400;
+      font-size: 13px;
+      letter-spacing: 0.5px;
+    }
+    
+    .nutrition-value {
+      color: #ff8c00;
+      font-weight: 600;
+    }
+    
+    .leader-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px;
+      color: #ff8c00;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+    
+    .leader-quote {
+      font-size: 17px;
+      font-weight: 500;
+      color: #ffffff;
+      line-height: 1.9;
+      margin-bottom: 1rem;
+    }
+    
+    .leader-name {
+      font-size: 13px;
+      color: #ff8c00;
+      font-weight: 600;
+    }
+    
+    footer {
+      margin-top: 4rem;
+      padding: 2.5rem 1.5rem;
+      border-top: 4px solid #ff8c00;
+      text-align: center;
+      background: linear-gradient(135deg, #0f1419 0%, #1a1f2e 100%);
+      border-radius: 16px 16px 0 0;
+    }
+    
+    .festival-info {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 800;
+      background: linear-gradient(90deg, #ff8c00 0%, #ffb347 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.75rem;
+      letter-spacing: 0.5px;
+    }
+    
+    .copyright {
+      font-size: 12px;
+      color: #b8b8b8;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>プロテインボール</h1>
+      <p class="subtitle">Protein Ball Shop</p>
+      <p class="event-info">N高 キャンパスフェスティバル 2025.9.19</p>
+    </header>
+
+    <section>
+      <h2 class="section-title">メニュー</h2>
+      <div class="menu-card fade-in">
+        <div class="menu-name">プロテインボール</div>
+        <div class="menu-description">もちもちで、ふんわり、香ばしい</div>
+        <div class="menu-appeal">高タンパク質でエネルギーチャージ。フェスティバルを全力で楽しもう</div>
+        <div class="menu-row">
+          <span class="menu-label">材料</span>
+          <span class="menu-value placeholder">後ほど追加予定</span>
+        </div>
+        <div class="menu-row">
+          <span class="menu-label">アレルギー</span>
+          <span class="menu-value placeholder">後ほど追加予定</span>
+        </div>
+        <div class="menu-row">
+          <span class="menu-label">チケット</span>
+          <span class="menu-value">〇枚</span>
+        </div>
+        
+        <button class="nutrition-toggle" onclick="toggleNutrition()">栄養成分情報を見る</button>
+        
+        <div class="nutrition-info" id="nutritionInfo">
+          <div class="nutrition-row">
+            <span class="nutrition-label">たんぱく質</span>
+            <span class="nutrition-value">後ほど追加予定</span>
+          </div>
+          <div class="nutrition-row">
+            <span class="nutrition-label">カロリー</span>
+            <span class="nutrition-value">後ほど追加予定</span>
+          </div>
+          <div class="nutrition-row">
+            <span class="nutrition-label">脂質</span>
+            <span class="nutrition-value">後ほど追加予定</span>
+          </div>
+          <div class="nutrition-row">
+            <span class="nutrition-label">炭水化物</span>
+            <span class="nutrition-value">後ほど追加予定</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="spacer"></div>
+
+    <div class="leader-section fade-in">
+      <div class="leader-label">リーダーからの一言</div>
+      <div class="leader-quote">健康的で美味しい、高タンパク質のボールでエネルギーチャージ。フェスティバルを楽しむあなたの相棒です。</div>
+      <div class="leader-name">— プロジェクトリーダー</div>
+    </div>
+
+    <footer>
+      <div class="festival-info">🎉 N高キャンパスフェスティバル 9/19（金）</div>
+      <div class="copyright">© 2026 N High School Hakataeki minami Campus</div>
+    </footer>
+  </div>
+
+  <script>
+    // スクロール時にアニメーション
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+    
+    document.querySelectorAll('.fade-in').forEach(el => {
+      observer.observe(el);
+    });
+    
+    // 栄養情報の表示/非表示
+    function toggleNutrition() {
+      const nutritionInfo = document.getElementById('nutritionInfo');
+      const toggleBtn = document.querySelector('.nutrition-toggle');
+      
+      nutritionInfo.classList.toggle('open');
+      toggleBtn.classList.toggle('open');
+      
+      if (nutritionInfo.classList.contains('open')) {
+        toggleBtn.textContent = '栄養成分情報を閉じる';
+      } else {
+        toggleBtn.textContent = '栄養成分情報を見る';
+      }
+    }
+  </script>
+</body>
+</html>
