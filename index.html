@@ -327,6 +327,29 @@
       font-weight: 500;
     }
     
+    .back-link {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.75rem 2rem;
+      background: linear-gradient(135deg, #ff8c00 0%, #ffb347 100%);
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: 'Russo One', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(255, 140, 0, 0.3);
+    }
+    
+    .back-link:hover {
+      background: linear-gradient(135deg, #ffb347 0%, #ffc857 100%);
+      box-shadow: 0 6px 16px rgba(255, 140, 0, 0.4);
+      transform: translateY(-2px);
+    }
+    
     @media (max-width: 768px) {
       .container {
         padding: 1.5rem 1rem;
@@ -449,6 +472,12 @@
         font-size: 11px;
       }
       
+      .back-link {
+        margin-top: 1.25rem;
+        padding: 0.65rem 1.5rem;
+        font-size: 12px;
+      }
+      
       .spacer {
         height: 3rem;
       }
@@ -537,6 +566,12 @@
         font-size: 18px;
       }
       
+      .back-link {
+        margin-top: 1rem;
+        padding: 0.6rem 1.25rem;
+        font-size: 11px;
+      }
+      
       .spacer {
         height: 3rem;
       }
@@ -548,7 +583,7 @@
     <header>
       <h1>プロテインボール</h1>
       <p class="subtitle">Protein Ball Shop</p>
-      <p class="event-info">N高 キャンパスフェスティバル 2026.9.19</p>
+      <p class="event-info">N高 キャンパスフェスティバル 2025.9.19</p>
     </header>
 
     <section>
@@ -683,6 +718,7 @@
     <footer>
       <div class="festival-info">🎉 N高キャンパスフェスティバル 9/19（金）</div>
       <div class="copyright">N High School Hakataeki minami Campus</div>
+      <a href="https://enube1115.github.io/Ncanfes-hakataminami-2026/" class="back-link">本サイトに戻る</a>
     </footer>
   </div>
 
