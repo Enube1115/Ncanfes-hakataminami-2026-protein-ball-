@@ -94,6 +94,7 @@
       padding: 2.5rem 2rem;
       max-width: 500px;
       box-shadow: 0 8px 24px rgba(255, 140, 0, 0.25);
+      margin-bottom: 2rem;
     }
     
     .menu-visual {
@@ -172,7 +173,7 @@
     }
     
     .spacer {
-      height: 8rem;
+      height: 4rem;
     }
     
     .leader-section {
@@ -361,6 +362,7 @@
       .menu-card {
         padding: 1.75rem 1.5rem;
         border: 2px solid #ff8c00;
+        margin-bottom: 1.5rem;
       }
       
       .menu-name {
@@ -448,7 +450,7 @@
       }
       
       .spacer {
-        height: 5rem;
+        height: 3rem;
       }
     }
     
@@ -485,6 +487,7 @@
         padding: 1.5rem 1.25rem;
         border: 2px solid #ff8c00;
         max-width: 100%;
+        margin-bottom: 1.25rem;
       }
       
       .menu-name {
@@ -550,9 +553,10 @@
 
     <section>
       <h2 class="section-title">メニュー</h2>
+      
       <div class="menu-card fade-in">
-        <div class="menu-name">プロテインボール</div>
-        <div class="menu-description">もちもちで、ふんわり、香ばしい</div>
+        <div class="menu-name">チョコ</div>
+        <div class="menu-description">濃厚でコク深い</div>
         <div class="menu-appeal">高タンパク質でエネルギーチャージ。フェスティバルを全力で楽しもう</div>
         <div class="menu-row">
           <span class="menu-label">材料</span>
@@ -567,9 +571,87 @@
           <span class="menu-value">〇枚</span>
         </div>
         
-        <button class="nutrition-toggle" onclick="toggleNutrition()">栄養成分情報を見る</button>
+        <button class="nutrition-toggle" onclick="toggleNutrition(0)">栄養成分情報を見る</button>
         
-        <div class="nutrition-info" id="nutritionInfo">
+        <div class="nutrition-info" id="nutritionInfo-0">
+          <div class="nutrition-row">
+            <span class="nutrition-label">たんぱく質</span>
+            <span class="nutrition-value">後ほど追加予定</span>
+          </div>
+          <div class="nutrition-row">
+            <span class="nutrition-label">カロリー</span>
+            <span class="nutrition-value">後ほど追加予定</span>
+          </div>
+          <div class="nutrition-row">
+            <span class="nutrition-label">脂質</span>
+            <span class="nutrition-value">後ほど追加予定</span>
+          </div>
+          <div class="nutrition-row">
+            <span class="nutrition-label">炭水化物</span>
+            <span class="nutrition-value">後ほど追加予定</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="menu-card fade-in">
+        <div class="menu-name">いちご</div>
+        <div class="menu-description">爽やかで甘い</div>
+        <div class="menu-appeal">高タンパク質でエネルギーチャージ。フェスティバルを全力で楽しもう</div>
+        <div class="menu-row">
+          <span class="menu-label">材料</span>
+          <span class="menu-value placeholder">後ほど追加予定</span>
+        </div>
+        <div class="menu-row">
+          <span class="menu-label">アレルギー</span>
+          <span class="menu-value placeholder">後ほど追加予定</span>
+        </div>
+        <div class="menu-row">
+          <span class="menu-label">チケット</span>
+          <span class="menu-value">〇枚</span>
+        </div>
+        
+        <button class="nutrition-toggle" onclick="toggleNutrition(1)">栄養成分情報を見る</button>
+        
+        <div class="nutrition-info" id="nutritionInfo-1">
+          <div class="nutrition-row">
+            <span class="nutrition-label">たんぱく質</span>
+            <span class="nutrition-value">後ほど追加予定</span>
+          </div>
+          <div class="nutrition-row">
+            <span class="nutrition-label">カロリー</span>
+            <span class="nutrition-value">後ほど追加予定</span>
+          </div>
+          <div class="nutrition-row">
+            <span class="nutrition-label">脂質</span>
+            <span class="nutrition-value">後ほど追加予定</span>
+          </div>
+          <div class="nutrition-row">
+            <span class="nutrition-label">炭水化物</span>
+            <span class="nutrition-value">後ほど追加予定</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="menu-card fade-in">
+        <div class="menu-name">チョコバナナ</div>
+        <div class="menu-description">濃厚でクリーミー</div>
+        <div class="menu-appeal">高タンパク質でエネルギーチャージ。フェスティバルを全力で楽しもう</div>
+        <div class="menu-row">
+          <span class="menu-label">材料</span>
+          <span class="menu-value placeholder">後ほど追加予定</span>
+        </div>
+        <div class="menu-row">
+          <span class="menu-label">アレルギー</span>
+          <span class="menu-value placeholder">後ほど追加予定</span>
+        </div>
+        <div class="menu-row">
+          <span class="menu-label">チケット</span>
+          <span class="menu-value">〇枚</span>
+        </div>
+        
+        <button class="nutrition-toggle" onclick="toggleNutrition(2)">栄養成分情報を見る</button>
+        
+        <div class="nutrition-info" id="nutritionInfo-2">
           <div class="nutrition-row">
             <span class="nutrition-label">たんぱく質</span>
             <span class="nutrition-value">後ほど追加予定</span>
@@ -594,13 +676,13 @@
 
     <div class="leader-section fade-in">
       <div class="leader-label">リーダーからの一言</div>
-      <div class="leader-quote">健康的で美味しい、高タンパク質のボールでエネルギーチャージ。フェスティバルを楽しむあなたの相棒です。</div>
+      <div class="leader-quote"></div>
       <div class="leader-name">— プロジェクトリーダー</div>
     </div>
 
     <footer>
       <div class="festival-info">🎉 N高キャンパスフェスティバル 9/19（金）</div>
-      <div class="copyright">2026 N High School Hakataeki minami Campus</div>
+      <div class="copyright">N High School Hakataeki minami Campus</div>
     </footer>
   </div>
 
@@ -625,9 +707,9 @@
     });
     
     // 栄養情報の表示/非表示
-    function toggleNutrition() {
-      const nutritionInfo = document.getElementById('nutritionInfo');
-      const toggleBtn = document.querySelector('.nutrition-toggle');
+    function toggleNutrition(menuIndex) {
+      const nutritionInfo = document.getElementById('nutritionInfo-' + menuIndex);
+      const toggleBtn = event.target;
       
       nutritionInfo.classList.toggle('open');
       toggleBtn.classList.toggle('open');
