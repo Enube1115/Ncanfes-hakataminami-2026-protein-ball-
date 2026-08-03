@@ -76,15 +76,29 @@
     
     .section-title {
       font-family: 'Russo One', sans-serif;
-      font-size: 28px;
+      font-size: 32px;
       font-weight: 400;
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
       background: linear-gradient(90deg, #ff8c00 0%, #ffb347 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      letter-spacing: 2px;
+      letter-spacing: 3px;
       text-transform: uppercase;
+      position: relative;
+      padding-bottom: 1rem;
+      display: inline-block;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, #ff8c00 0%, #ffb347 100%);
+      border-radius: 2px;
     }
     
     .menu-card {
@@ -377,9 +391,14 @@
       }
       
       .section-title {
-        font-size: 22px;
-        letter-spacing: 1px;
-        margin-bottom: 1.5rem;
+        font-size: 26px;
+        letter-spacing: 2px;
+        margin-bottom: 2rem;
+        padding-bottom: 0.75rem;
+      }
+      
+      .section-title::after {
+        height: 2px;
       }
       
       .menu-card {
@@ -508,8 +527,14 @@
       }
       
       .section-title {
-        font-size: 18px;
-        letter-spacing: 0.5px;
+        font-size: 22px;
+        letter-spacing: 1.5px;
+        margin-bottom: 1.75rem;
+        padding-bottom: 0.6rem;
+      }
+      
+      .section-title::after {
+        height: 2px;
       }
       
       .menu-card {
