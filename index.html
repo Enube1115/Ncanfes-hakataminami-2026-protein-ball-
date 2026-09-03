@@ -1,786 +1,785 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>プロテインボール - N高キャンパスフェスティバル</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Poppins:wght@600;700&family=Playfair+Display:wght@700;800&family=Montserrat:wght@600;700&family=Russo+One&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
-    body {
-      font-family: 'Noto Sans JP', sans-serif;
-      color: #ffffff;
-      background: linear-gradient(180deg, #0f1419 0%, #1a1f2e 50%, #0d0f14 100%);
-      background-attachment: fixed;
-      line-height: 1.7;
-    }
-    
-    section {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    
-    header {
-      text-align: center;
-      margin-bottom: 2.5rem;
-      border-bottom: 4px solid #ff8c00;
-      padding: 2.5rem 1.5rem 2rem;
-      background: linear-gradient(135deg, #1a1f2e 0%, #0f1419 100%);
-      border-radius: 0 0 16px 16px;
-    }
-    
-    h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 56px;
-      font-weight: 800;
-      margin-bottom: 0.75rem;
-      background: linear-gradient(135deg, #ff8c00 0%, #ffb347 50%, #ff6600 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      letter-spacing: 1px;
-      text-shadow: 0 4px 12px rgba(255, 140, 0, 0.2);
-      filter: drop-shadow(0 2px 4px rgba(255, 140, 0, 0.1));
-    }
-    
-    .subtitle {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 20px;
-      font-weight: 800;
-      color: #ff8c00;
-      margin-top: 0.75rem;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-    }
-    
-    .event-info {
-      font-family: 'Playfair Display', serif;
-      font-size: 24px;
-      font-weight: 800;
-      color: #ff6600;
-      margin-top: 1rem;
-      letter-spacing: 1px;
-      background: linear-gradient(90deg, #ff8c00 0%, #ffb347 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    
-    .section-title {
-      font-family: 'Russo One', sans-serif;
-      font-size: 32px;
-      font-weight: 400;
-      margin-bottom: 3rem;
-      background: linear-gradient(90deg, #ff8c00 0%, #ffb347 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      position: relative;
-      padding-bottom: 1rem;
-      display: inline-block;
-    }
-    
-    .section-title::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 3px;
-      background: linear-gradient(90deg, #ff8c00 0%, #ffb347 100%);
-      border-radius: 2px;
-    }
-    
-    .menu-card {
-      background: linear-gradient(135deg, #1a1f2e 0%, #0f1419 100%);
-      border: 3px solid #ff8c00;
-      border-radius: 12px;
-      padding: 2.5rem 2rem;
-      max-width: 500px;
-      box-shadow: 0 8px 24px rgba(255, 140, 0, 0.25);
-      margin-bottom: 2rem;
-    }
-    
-    .menu-visual {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 1.5rem;
-      font-size: 48px;
-      letter-spacing: 8px;
-    }
-    
-    .menu-name {
-      font-family: 'Russo One', sans-serif;
-      font-size: 36px;
-      font-weight: 400;
-      color: #ff8c00;
-      margin-bottom: 1rem;
-      text-align: center;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-    
-    .menu-description {
-      font-family: 'Noto Sans JP', sans-serif;
-      font-size: 17px;
-      color: #e8e8e8;
-      text-align: center;
-      margin-bottom: 1rem;
-      line-height: 1.8;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-    }
-    
-    .menu-appeal {
-      font-family: 'Russo One', sans-serif;
-      font-size: 15px;
-      color: #ffb347;
-      text-align: center;
-      margin-bottom: 2rem;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 1.8;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
-    
-    .menu-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 1rem;
-      font-size: 14px;
-      padding: 0.75rem 0;
-      border-bottom: 0.5px solid rgba(255, 140, 0, 0.2);
-    }
-    
-    .menu-row:last-child {
-      border-bottom: none;
-    }
-    
-    .menu-label {
-      font-family: 'Russo One', sans-serif;
-      color: #b8b8b8;
-      font-weight: 400;
-      font-size: 13px;
-      letter-spacing: 0.5px;
-    }
-    
-    .menu-value {
-      color: #ff8c00;
-      font-weight: 600;
-    }
-    
-    .placeholder {
-      color: #888888;
-      font-style: italic;
-    }
-    
-    .spacer {
-      height: 4rem;
-    }
-    
-    .leader-section {
-      background: linear-gradient(135deg, #1a1f2e 0%, #0f1419 100%);
-      border: 3px solid #ff8c00;
-      border-radius: 12px;
-      padding: 2rem;
-    }
-    
-    .appeal {
-      text-align: center;
-      margin: 2rem 0;
-      font-size: 18px;
-      font-weight: 600;
-      color: #ff8c00;
-      line-height: 1.8;
-    }
-    
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    
-    .fade-in {
-      opacity: 0;
-    }
-    
-    .fade-in.visible {
-      animation: fadeInUp 0.6s ease-out forwards;
-    }
-    
-    .nutrition-toggle {
-      background: #ff8c00;
-      color: white;
-      border: none;
-      padding: 0.75rem 1.5rem;
-      border-radius: 8px;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      font-size: 14px;
-      cursor: pointer;
-      margin-top: 1.5rem;
-      width: 100%;
-      transition: all 0.3s ease;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-    
-    .nutrition-toggle:hover {
-      background: #ff9f1f;
-      box-shadow: 0 4px 12px rgba(255, 140, 0, 0.4);
-    }
-    
-    .nutrition-toggle.open {
-      background: #ff7722;
-    }
-    
-    .nutrition-info {
-      display: none;
-      margin-top: 1.5rem;
-      padding: 1.5rem;
-      background: rgba(255, 140, 0, 0.08);
-      border-radius: 8px;
-      border-left: 4px solid #ff8c00;
-    }
-    
-    .nutrition-info.open {
-      display: block;
-      animation: fadeInUp 0.4s ease-out;
-    }
-    
-    .nutrition-row {
-      display: flex;
-      justify-content: space-between;
-      padding: 0.5rem 0;
-      font-size: 13px;
-      border-bottom: 0.5px solid rgba(255, 140, 0, 0.2);
-    }
-    
-    .nutrition-row:last-child {
-      border-bottom: none;
-    }
-    
-    .nutrition-label {
-      font-family: 'Russo One', sans-serif;
-      color: #b8b8b8;
-      font-weight: 400;
-      font-size: 13px;
-      letter-spacing: 0.5px;
-    }
-    
-    .nutrition-value {
-      color: #ff8c00;
-      font-weight: 600;
-    }
-    
-    .leader-label {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 12px;
-      color: #ff8c00;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      margin-bottom: 1rem;
-      font-weight: 700;
-    }
-    
-    .leader-quote {
-      font-size: 17px;
-      font-weight: 500;
-      color: #ffffff;
-      line-height: 1.9;
-      margin-bottom: 1rem;
-    }
-    
-    .leader-name {
-      font-size: 13px;
-      color: #ff8c00;
-      font-weight: 600;
-    }
-    
-    footer {
-      margin-top: 4rem;
-      padding: 2.5rem 1.5rem;
-      border-top: 4px solid #ff8c00;
-      text-align: center;
-      background: linear-gradient(135deg, #0f1419 0%, #1a1f2e 100%);
-      border-radius: 16px 16px 0 0;
-    }
-    
-    .festival-info {
-      font-family: 'Playfair Display', serif;
-      font-size: 28px;
-      font-weight: 800;
-      background: linear-gradient(90deg, #ff8c00 0%, #ffb347 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 0.75rem;
-      letter-spacing: 0.5px;
-    }
-    
-    .copyright {
-      font-size: 12px;
-      color: #b8b8b8;
-      font-weight: 500;
-    }
-    
-    .back-link {
-      display: inline-block;
-      margin-top: 1.5rem;
-      padding: 0.75rem 2rem;
-      background: linear-gradient(135deg, #ff8c00 0%, #ffb347 100%);
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-family: 'Russo One', sans-serif;
-      font-size: 14px;
-      font-weight: 400;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 12px rgba(255, 140, 0, 0.3);
-    }
-    
-    .back-link:hover {
-      background: linear-gradient(135deg, #ffb347 0%, #ffc857 100%);
-      box-shadow: 0 6px 16px rgba(255, 140, 0, 0.4);
-      transform: translateY(-2px);
-    }
-    
-    @media (max-width: 768px) {
-      .container {
-        padding: 1.5rem 1rem;
-      }
-      
-      header {
-        padding: 1.5rem 1rem 1.25rem;
-        margin-bottom: 2rem;
-      }
-      
-      h1 {
-        font-size: 36px;
-        margin-bottom: 0.5rem;
-      }
-      
-      .subtitle {
-        font-size: 16px;
-        letter-spacing: 2px;
-        margin-top: 0.5rem;
-      }
-      
-      .event-info {
-        font-size: 18px;
-        margin-top: 0.75rem;
-      }
-      
-      .section-title {
-        font-size: 26px;
-        letter-spacing: 2px;
-        margin-bottom: 2rem;
-        padding-bottom: 0.75rem;
-      }
-      
-      .section-title::after {
-        height: 2px;
-      }
-      
-      .menu-card {
-        padding: 1.75rem 1.5rem;
-        border: 2px solid #ff8c00;
-        margin-bottom: 1.5rem;
-      }
-      
-      .menu-name {
-        font-size: 28px;
-        letter-spacing: 1px;
-        margin-bottom: 0.75rem;
-      }
-      
-      .menu-description {
-        font-size: 15px;
-        margin-bottom: 0.75rem;
-      }
-      
-      .menu-appeal {
-        font-size: 13px;
-        margin-bottom: 1.5rem;
-        letter-spacing: 0.5px;
-      }
-      
-      .menu-row {
-        font-size: 13px;
-        margin-bottom: 0.75rem;
-        padding: 0.5rem 0;
-      }
-      
-      .menu-label {
-        font-size: 12px;
-      }
-      
-      .nutrition-toggle {
-        padding: 0.65rem 1.25rem;
-        font-size: 12px;
-        margin-top: 1rem;
-      }
-      
-      .nutrition-info {
-        margin-top: 1rem;
-        padding: 1rem;
-      }
-      
-      .nutrition-row {
-        font-size: 12px;
-        padding: 0.4rem 0;
-      }
-      
-      .nutrition-label {
-        font-size: 12px;
-      }
-      
-      .leader-section {
-        padding: 1.5rem;
-        border: 2px solid #ff8c00;
-        margin-top: 3rem;
-      }
-      
-      .leader-label {
-        font-size: 11px;
-        letter-spacing: 1px;
-        margin-bottom: 0.75rem;
-      }
-      
-      .leader-quote {
-        font-size: 15px;
-        line-height: 1.7;
-        margin-bottom: 0.75rem;
-      }
-      
-      .leader-name {
-        font-size: 12px;
-      }
-      
-      footer {
-        margin-top: 3rem;
-        padding: 1.75rem 1rem;
-        border-top: 3px solid #ff8c00;
-      }
-      
-      .festival-info {
-        font-size: 22px;
-        margin-bottom: 0.5rem;
-      }
-      
-      .copyright {
-        font-size: 11px;
-      }
-      
-      .back-link {
-        margin-top: 1.25rem;
-        padding: 0.65rem 1.5rem;
-        font-size: 12px;
-      }
-      
-      .spacer {
-        height: 3rem;
-      }
-    }
-    
-    @media (max-width: 480px) {
-      .container {
-        padding: 1rem 0.75rem;
-      }
-      
-      header {
-        padding: 1.25rem 0.75rem 1rem;
-        margin-bottom: 1.5rem;
-        border-radius: 0;
-      }
-      
-      h1 {
-        font-size: 28px;
-      }
-      
-      .subtitle {
-        font-size: 14px;
-        letter-spacing: 1.5px;
-      }
-      
-      .event-info {
-        font-size: 14px;
-      }
-      
-      .section-title {
-        font-size: 22px;
-        letter-spacing: 1.5px;
-        margin-bottom: 1.75rem;
-        padding-bottom: 0.6rem;
-      }
-      
-      .section-title::after {
-        height: 2px;
-      }
-      
-      .menu-card {
-        padding: 1.5rem 1.25rem;
-        border: 2px solid #ff8c00;
-        max-width: 100%;
-        margin-bottom: 1.25rem;
-      }
-      
-      .menu-name {
-        font-size: 24px;
-        letter-spacing: 0.5px;
-      }
-      
-      .menu-description {
-        font-size: 13px;
-      }
-      
-      .menu-appeal {
-        font-size: 12px;
-        margin-bottom: 1.25rem;
-      }
-      
-      .menu-row {
-        font-size: 12px;
-        margin-bottom: 0.5rem;
-      }
-      
-      .nutrition-toggle {
-        padding: 0.6rem 1rem;
-        font-size: 11px;
-      }
-      
-      .leader-section {
-        padding: 1.25rem;
-        margin-top: 2.5rem;
-      }
-      
-      .leader-quote {
-        font-size: 14px;
-        line-height: 1.6;
-      }
-      
-      .leader-label {
-        font-size: 10px;
-      }
-      
-      footer {
-        margin-top: 2.5rem;
-        padding: 1.5rem 0.75rem;
-      }
-      
-      .festival-info {
-        font-size: 18px;
-      }
-      
-      .back-link {
-        margin-top: 1rem;
-        padding: 0.6rem 1.25rem;
-        font-size: 11px;
-      }
-      
-      .spacer {
-        height: 3rem;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ロシアンシュークリーム | N高キャンパスフェスティバル</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "DotGothic16", sans-serif;
+            background: linear-gradient(135deg, #f5f0eb 0%, #faf8f5 50%, #f0e8e0 100%);
+            background-attachment: fixed;
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(139, 46, 62, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(139, 46, 62, 0.02) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* ヘッダー */
+        header {
+            background: #fff9f5;
+            border-bottom: 4px solid #8b2e3e;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(139, 46, 62, 0.05), transparent);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .header-content h1 {
+            font-size: 2.5rem;
+            color: #8b2e3e;
+            margin-bottom: 5px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            animation: slideDown 0.6s ease-out;
+        }
+
+        .header-content p {
+            font-size: 0.95rem;
+            color: #666;
+            font-style: italic;
+            animation: fadeIn 0.8s ease-out 0.2s both;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .breadcrumb {
+            font-size: 0.85rem;
+            color: #999;
+            margin-top: 10px;
+        }
+
+        /* コンテナ */
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* セクション */
+        section {
+            background: #fff;
+            border-radius: 12px;
+            padding: 35px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            border-left: 5px solid #8b2e3e;
+            animation: fadeInUp 0.6s ease-out;
+            opacity: 0;
+            animation-fill-mode: both;
+        }
+
+        section:nth-child(1) { animation-delay: 0.1s; }
+        section:nth-child(2) { animation-delay: 0.2s; }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        section h2 {
+            font-size: 1.8rem;
+            color: #8b2e3e;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #f0d5d5;
+            padding-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+            animation: fadeInRight 0.6s ease-out;
+        }
+
+        section h2::after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #8b2e3e;
+            animation: expandWidth 0.8s ease-out 0.2s forwards;
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes expandWidth {
+            from {
+                width: 0;
+            }
+            to {
+                width: 60px;
+            }
+        }
+
+        /* リーダーセクション */
+        .leader-box {
+            background: linear-gradient(135deg, #fef5f0 0%, #fff9f7 100%);
+            border: 2px solid #d4a5a5;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.6s ease-out 0.3s both;
+        }
+
+        .leader-box::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 60%, rgba(139, 46, 62, 0.08) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 30%, rgba(139, 46, 62, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .leader-box > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .leader-name {
+            font-size: 1.4rem;
+            color: #8b2e3e;
+            font-weight: 600;
+            margin-bottom: 12px;
+            animation: fadeIn 0.8s ease-out 0.4s both;
+        }
+
+        .leader-name::before {
+            content: "📍 ";
+        }
+
+        .leader-comment {
+            font-size: 1.1rem;
+            color: #555;
+            font-style: italic;
+            line-height: 1.8;
+            animation: fadeIn 0.8s ease-out 0.5s both;
+        }
+
+        /* メニューコンテナ */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+        }
+
+        .menu-intro {
+            font-size: 1rem;
+            color: #8b2e3e;
+            background: linear-gradient(135deg, #fef5f0 0%, #fff9f7 100%);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #8b2e3e;
+            margin-bottom: 25px;
+            font-weight: 500;
+        }
+
+        @media (min-width: 768px) {
+            .menu-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        /* メニューカード */
+        .menu-card {
+            background: linear-gradient(135deg, #fef9f5 0%, #fff5f0 100%);
+            border: 2px solid #e8c8c8;
+            border-radius: 10px;
+            padding: 20px;
+            transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .menu-card::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(139, 46, 62, 0.1) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.35s ease;
+        }
+
+        .menu-card:hover::before {
+            opacity: 1;
+        }
+
+        .menu-card:hover {
+            box-shadow: 0 8px 24px rgba(139, 46, 62, 0.2), inset 0 0 20px rgba(139, 46, 62, 0.05);
+            transform: translateY(-6px) scale(1.02);
+            border-color: #8b2e3e;
+        }
+
+        /* タッチデバイス対応：ホバー効果を無効化 */
+        @media (hover: none) {
+            .menu-card:hover {
+                transform: scale(1);
+                box-shadow: 0 4px 12px rgba(139, 46, 62, 0.15);
+            }
+
+            .menu-card:active {
+                box-shadow: 0 8px 24px rgba(139, 46, 62, 0.2), inset 0 0 20px rgba(139, 46, 62, 0.05);
+                transform: scale(1.02);
+            }
+
+            .back-button:hover {
+                transform: none;
+                box-shadow: 0 4px 12px rgba(139, 46, 62, 0.2);
+            }
+
+            .back-button:active {
+                transform: scale(0.98);
+            }
+        }
+
+        .menu-card > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .menu-number {
+            font-size: 2rem;
+            color: #8b2e3e;
+            font-weight: 700;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #8b2e3e 0%, #c85a6b 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 2px;
+        }
+
+        .menu-number::after {
+            content: " ✨";
+            -webkit-text-fill-color: unset;
+            font-size: 1.2rem;
+        }
+
+        .menu-separator {
+            background: linear-gradient(90deg, transparent, #8b2e3e, transparent);
+            height: 2px;
+            margin: 12px 0;
+            animation: expandLine 0.6s ease-out 0.3s both;
+        }
+
+        @keyframes expandLine {
+            from {
+                width: 0;
+                margin-left: 50%;
+                margin-right: 50%;
+            }
+            to {
+                width: 100%;
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+
+        .menu-field {
+            margin: 12px 0;
+            font-size: 0.95rem;
+            animation: fadeIn 0.6s ease-out forwards;
+            opacity: 0;
+        }
+
+        .menu-field:nth-child(2) { animation-delay: 0.4s; }
+        .menu-field:nth-child(3) { animation-delay: 0.5s; }
+
+        .menu-field-label {
+            color: #8b2e3e;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .menu-field-value {
+            color: #666;
+            padding-left: 10px;
+            border-left: 3px solid #e8c8c8;
+            margin-left: 5px;
+        }
+
+        .ticket-section {
+            background: linear-gradient(135deg, #fff5f0 0%, #ffe8e0 100%);
+            border-radius: 8px;
+            padding: 12px;
+            margin-top: 15px;
+            text-align: center;
+            font-weight: 600;
+            color: #8b2e3e;
+            border: 1px solid #e8c8c8;
+            transition: all 0.3s ease;
+        }
+
+        .menu-card:hover .ticket-section {
+            background: linear-gradient(135deg, #ffd5cc 0%, #ffb3a0 100%);
+            border-color: #8b2e3e;
+            transform: scale(1.05);
+        }
+
+        /* 説明文 */
+        .info-text {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f9f5f0;
+            border-radius: 8px;
+            border-left: 4px solid #8b2e3e;
+        }
+
+        /* フッター */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #999;
+            font-size: 0.9rem;
+            border-top: 1px solid #eee;
+            margin-top: 50px;
+            background: linear-gradient(180deg, transparent 0%, rgba(139, 46, 62, 0.02) 100%);
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 14px 28px;
+            background: linear-gradient(135deg, #8b2e3e 0%, #a83a4a 100%);
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 8px;
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            box-shadow: 0 4px 12px rgba(139, 46, 62, 0.2);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .back-button::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .back-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(139, 46, 62, 0.3);
+        }
+
+        .back-button:hover::before {
+            left: 100%;
+        }
+
+        .back-button:active {
+            transform: translateY(-1px);
+        }
+
+        /* イベント情報ボックス */
+        .event-info {
+            background: linear-gradient(135deg, #8b2e3e 0%, #a83a4a 100%);
+            color: #fff;
+            text-align: center;
+            padding: 30px 20px;
+            margin: 50px auto;
+            max-width: 900px;
+            border-radius: 12px;
+            box-shadow: 0 6px 16px rgba(139, 46, 62, 0.25), 0 0 30px rgba(139, 46, 62, 0.1);
+            animation: slideUp 0.6s ease-out, pulse 3s ease-in-out infinite;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .event-info::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.05) 50%, transparent 70%);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 6px 16px rgba(139, 46, 62, 0.25), 0 0 30px rgba(139, 46, 62, 0.1);
+            }
+            50% {
+                box-shadow: 0 6px 16px rgba(139, 46, 62, 0.35), 0 0 40px rgba(139, 46, 62, 0.2);
+            }
+        }
+
+        .event-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+        }
+
+        .event-info p {
+            font-size: 1.1rem;
+            margin: 0;
+            letter-spacing: 0.5px;
+            position: relative;
+            z-index: 1;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            section {
+                padding: 25px 20px;
+            }
+
+            .header-content h1 {
+                font-size: 2rem;
+            }
+
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            section {
+                padding: 18px 15px;
+                border-left: 3px solid #8b2e3e;
+            }
+
+            .header-content h1 {
+                font-size: 1.5rem;
+            }
+
+            .header-content p {
+                font-size: 0.85rem;
+            }
+
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section h2 {
+                font-size: 1.2rem;
+                gap: 5px;
+            }
+
+            .menu-card {
+                padding: 15px;
+            }
+
+            .menu-number {
+                font-size: 1.5rem;
+            }
+
+            .menu-field {
+                font-size: 0.85rem;
+            }
+
+            .leader-box {
+                padding: 18px;
+            }
+
+            .leader-name {
+                font-size: 1.1rem;
+            }
+
+            .leader-comment {
+                font-size: 0.95rem;
+            }
+
+            .event-info {
+                padding: 25px 15px;
+                margin: 35px auto;
+            }
+
+            .event-info h3 {
+                font-size: 1.2rem;
+                margin-bottom: 12px;
+            }
+
+            .event-info p {
+                font-size: 0.95rem;
+            }
+
+            .info-text {
+                font-size: 0.85rem;
+                padding: 12px;
+            }
+
+            .back-button {
+                padding: 12px 24px;
+                font-size: 0.9rem;
+                width: 100%;
+                max-width: 300px;
+                min-height: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        /* 超小画面対応（320px以下） */
+        @media (max-width: 320px) {
+            .container {
+                padding: 0 12px;
+            }
+
+            section {
+                padding: 15px 12px;
+                border-left: 2px solid #8b2e3e;
+                margin-bottom: 20px;
+            }
+
+            .header-content h1 {
+                font-size: 1.3rem;
+                letter-spacing: 0.5px;
+            }
+
+            .header-content p {
+                font-size: 0.8rem;
+            }
+
+            .breadcrumb {
+                font-size: 0.75rem;
+            }
+
+            section h2 {
+                font-size: 1.1rem;
+                margin-bottom: 18px;
+                padding-bottom: 10px;
+            }
+
+            .menu-card {
+                padding: 12px;
+            }
+
+            .menu-number {
+                font-size: 1.3rem;
+                letter-spacing: 1px;
+            }
+
+            .menu-intro {
+                font-size: 0.9rem;
+                padding: 12px;
+                margin-bottom: 18px;
+            }
+
+            .menu-field-label {
+                font-size: 0.85rem;
+            }
+
+            .menu-field-value {
+                font-size: 0.85rem;
+            }
+
+            .ticket-section {
+                padding: 10px;
+                font-size: 0.9rem;
+                margin-top: 12px;
+            }
+
+            .leader-box {
+                padding: 15px;
+                margin-bottom: 20px;
+            }
+
+            .leader-comment {
+                font-size: 0.95rem;
+                line-height: 1.6;
+            }
+
+            .event-info {
+                padding: 20px 12px;
+                margin: 30px auto;
+                border-radius: 10px;
+            }
+
+            .event-info h3 {
+                font-size: 1.1rem;
+                margin-bottom: 10px;
+            }
+
+            .event-info p {
+                font-size: 0.9rem;
+            }
+
+            .back-button {
+                padding: 11px 20px;
+                font-size: 0.85rem;
+                width: 100%;
+                max-width: 280px;
+                min-height: 44px;
+                border-radius: 6px;
+            }
+
+            footer {
+                padding: 30px 12px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
     <header>
-      <h1>プロテインボール</h1>
-      <p class="subtitle">Protein Ball Shop</p>
-      <p class="event-info">N高 キャンパスフェスティバル 2025.9.19</p>
+        <div class="header-content">
+            <h1>🍪 ロシアンシュークリーム</h1>
+            <p>甘くクリーミーなシュークリームの世界へ</p>
+            <div class="breadcrumb">N高キャンパスフェスティバル 2026</div>
+        </div>
     </header>
 
-    <section>
-      <h2 class="section-title">メニュー</h2>
-      
-      <div class="menu-card fade-in">
-        <div class="menu-name">チョコ</div>
-        <div class="menu-description">濃厚でコク深い</div>
-        <div class="menu-appeal">高タンパク質でエネルギーチャージ。フェスティバルを全力で楽しもう</div>
-        <div class="menu-row">
-          <span class="menu-label">材料</span>
-          <span class="menu-value placeholder">後ほど追加予定</span>
-        </div>
-        <div class="menu-row">
-          <span class="menu-label">アレルギー</span>
-          <span class="menu-value placeholder">後ほど追加予定</span>
-        </div>
-        <div class="menu-row">
-          <span class="menu-label">チケット</span>
-          <span class="menu-value">〇枚</span>
-        </div>
-        
-        <button class="nutrition-toggle" onclick="toggleNutrition(0)">栄養成分情報を見る</button>
-        
-        <div class="nutrition-info" id="nutritionInfo-0">
-          <div class="nutrition-row">
-            <span class="nutrition-label">たんぱく質</span>
-            <span class="nutrition-value">後ほど追加予定</span>
-          </div>
-          <div class="nutrition-row">
-            <span class="nutrition-label">カロリー</span>
-            <span class="nutrition-value">後ほど追加予定</span>
-          </div>
-          <div class="nutrition-row">
-            <span class="nutrition-label">脂質</span>
-            <span class="nutrition-value">後ほど追加予定</span>
-          </div>
-          <div class="nutrition-row">
-            <span class="nutrition-label">炭水化物</span>
-            <span class="nutrition-value">後ほど追加予定</span>
-          </div>
-        </div>
-      </div>
-      
-      <div class="menu-card fade-in">
-        <div class="menu-name">いちご</div>
-        <div class="menu-description">爽やかで甘い</div>
-        <div class="menu-appeal">高タンパク質でエネルギーチャージ。フェスティバルを全力で楽しもう</div>
-        <div class="menu-row">
-          <span class="menu-label">材料</span>
-          <span class="menu-value placeholder">後ほど追加予定</span>
-        </div>
-        <div class="menu-row">
-          <span class="menu-label">アレルギー</span>
-          <span class="menu-value placeholder">後ほど追加予定</span>
-        </div>
-        <div class="menu-row">
-          <span class="menu-label">チケット</span>
-          <span class="menu-value">〇枚</span>
-        </div>
-        
-        <button class="nutrition-toggle" onclick="toggleNutrition(1)">栄養成分情報を見る</button>
-        
-        <div class="nutrition-info" id="nutritionInfo-1">
-          <div class="nutrition-row">
-            <span class="nutrition-label">たんぱく質</span>
-            <span class="nutrition-value">後ほど追加予定</span>
-          </div>
-          <div class="nutrition-row">
-            <span class="nutrition-label">カロリー</span>
-            <span class="nutrition-value">後ほど追加予定</span>
-          </div>
-          <div class="nutrition-row">
-            <span class="nutrition-label">脂質</span>
-            <span class="nutrition-value">後ほど追加予定</span>
-          </div>
-          <div class="nutrition-row">
-            <span class="nutrition-label">炭水化物</span>
-            <span class="nutrition-value">後ほど追加予定</span>
-          </div>
-        </div>
-      </div>
-      
-      <div class="menu-card fade-in">
-        <div class="menu-name">チョコバナナ</div>
-        <div class="menu-description">濃厚でクリーミー</div>
-        <div class="menu-appeal">高タンパク質でエネルギーチャージ。フェスティバルを全力で楽しもう</div>
-        <div class="menu-row">
-          <span class="menu-label">材料</span>
-          <span class="menu-value placeholder">後ほど追加予定</span>
-        </div>
-        <div class="menu-row">
-          <span class="menu-label">アレルギー</span>
-          <span class="menu-value placeholder">後ほど追加予定</span>
-        </div>
-        <div class="menu-row">
-          <span class="menu-label">チケット</span>
-          <span class="menu-value">〇枚</span>
-        </div>
-        
-        <button class="nutrition-toggle" onclick="toggleNutrition(2)">栄養成分情報を見る</button>
-        
-        <div class="nutrition-info" id="nutritionInfo-2">
-          <div class="nutrition-row">
-            <span class="nutrition-label">たんぱく質</span>
-            <span class="nutrition-value">後ほど追加予定</span>
-          </div>
-          <div class="nutrition-row">
-            <span class="nutrition-label">カロリー</span>
-            <span class="nutrition-value">後ほど追加予定</span>
-          </div>
-          <div class="nutrition-row">
-            <span class="nutrition-label">脂質</span>
-            <span class="nutrition-value">後ほど追加予定</span>
-          </div>
-          <div class="nutrition-row">
-            <span class="nutrition-label">炭水化物</span>
-            <span class="nutrition-value">後ほど追加予定</span>
-          </div>
-        </div>
-      </div>
-    </section>
+    <div class="container">
+        <!-- メニュー -->
+        <section>
+            <h2>📋 メニュー</h2>
+            <p class="menu-intro">※ 3個のシュークリームが1セット。どれかのシュークリームに練り梅が入っています。</p>
+            <div class="menu-card">
+                <div class="menu-number">ロシアンシュークリーム</div>
+                <div class="menu-separator"></div>
+                <div class="menu-field">
+                    <div class="menu-field-label">内容</div>
+                    <div class="menu-field-value">シュークリーム×3（うち1つに練り梅入り）</div>
+                </div>
+                <div class="menu-field">
+                    <div class="menu-field-label">材料</div>
+                    <div class="menu-field-value">後ほど追加予定</div>
+                </div>
+                <div class="menu-field">
+                    <div class="menu-field-label">アレルギー</div>
+                    <div class="menu-field-value">後ほど追加予定</div>
+                </div>
+                <div class="ticket-section">チケット：〇枚</div>
+            </div>
+        </section>
 
-    <div class="spacer"></div>
+        <!-- リーダーからの一言 -->
+        <section>
+            <h2>リーダーからの一言</h2>
+            <div class="leader-box">
+                <div class="leader-comment">
+                    勇気を持ってひとくちで❣️
+                </div>
+            </div>
+        </section>
 
-    <div class="leader-section fade-in">
-      <div class="leader-label">リーダーからの一言</div>
-      <div class="leader-quote"></div>
-      <div class="leader-name">— プロジェクトリーダー</div>
     </div>
 
     <footer>
-      <div class="festival-info">🎉 N高キャンパスフェスティバル 9/19（金）</div>
-      <div class="copyright">N High School Hakataeki minami Campus</div>
-      <a href="https://enube1115.github.io/Ncanfes-hakataminami-2026/" class="back-link">本サイトに戻る</a>
+        <a href="https://enube1115.github.io/Ncanfes-hakataminami-2026/" class="back-button">
+            ← 本サイトに戻る
+        </a>
     </footer>
-  </div>
 
-  <script>
-    // スクロール時にアニメーション
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-    
-    const observer = new IntersectionObserver(function(entries) {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, observerOptions);
-    
-    document.querySelectorAll('.fade-in').forEach(el => {
-      observer.observe(el);
-    });
-    
-    // 栄養情報の表示/非表示
-    function toggleNutrition(menuIndex) {
-      const nutritionInfo = document.getElementById('nutritionInfo-' + menuIndex);
-      const toggleBtn = event.target;
-      
-      nutritionInfo.classList.toggle('open');
-      toggleBtn.classList.toggle('open');
-      
-      if (nutritionInfo.classList.contains('open')) {
-        toggleBtn.textContent = '栄養成分情報を閉じる';
-      } else {
-        toggleBtn.textContent = '栄養成分情報を見る';
-      }
-    }
-  </script>
+    <!-- イベント情報 -->
+    <div class="event-info">
+        <h3>🎉 N高キャンパスフェスティバル 9/19（金）</h3>
+        <p>2026 N High School Hakataeki minami Campus</p>
+    </div>
 </body>
 </html>
